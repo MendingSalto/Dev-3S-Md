@@ -1,22 +1,3 @@
-Skip to content
-MendingSalto
-/
-Dev-3S-Md
-Public
-forked from MendingTuru/Dev-3S-Md
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Dev-3S-Md/plugins/menu.js
-@MendingTuru
-MendingTuru Update menu.js
- 1 contributor
-493 lines (486 sloc)  28.5 KB
 let levelling = require('../lib/levelling')
 let { MessageType } = require('@adiwajshing/baileys')
 let fs = require('fs')
@@ -25,14 +6,14 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌────►〔 *K•K•R-BOT* 〕
-├ Hallo Tod Ngentod %name!
+┌────►〔 *3S-BOT* 〕
+├ Hallo Ngentod🗿 %name!
 ├ Kamu Adalah Role %role
 ├ Kamu adalah %rank
 ├ Tersisa *%limit Limit*
 ├ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 ├%totalexp XP in Total
-├✮ Owner: https://wa.me/+13049948857
+├✮ Owner: https://wa.me/6287740530274
 └────►
 %readmore`.trimStart(),
   header: '┏━━━•❅•°•❈ %category 』',
@@ -223,8 +204,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.sendMessage(m.chat, {
            title: `Hallo ${name} ${'@'+m.sender.split`@`[0]}`.trim(),
            text: `\nKamu Adalah ${rank}\nTersisa *${limit}* Limit\nLevel *${level}*`, 
-           footer: "® K•K•R✓𝐁𝐎𝐓",
-           buttonText: "Klik Disini",
+           footer: "®.K•K•R✓𝐁𝐎𝐓",
+           buttonText: "Sini Ngentod Pilih Aja",
            "sections": [
             {
               "rows": [
@@ -385,7 +366,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     // gunakan ini jika kamu menggunakan whatsapp bisnis
     //   throw `
-    // ┌〔 PILIH AJA NGNTOD 〕
+    // ┌〔 PILIH AJA MEK KNTOL 〕
     // ├ ${_p + command} all
     // ├ ${_p + command} game
     // ├ ${_p + command} xp
@@ -510,18 +491,3 @@ function ucapan() {
   }
   return res
 }
-Footer
-® 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Dev-3S-Md/menu.js at main · MendingSalto/Dev-3S-Md
