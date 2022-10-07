@@ -1,6 +1,6 @@
 global.you = ['6285232604817', '6285771052661', '6285232604817'] // Developer Bot
 global.rowner = ['13049948857'] // Real Owner Bot
-global.owner = ['13049948857'] // Owner Bot
+global.owner = ['6285232604817'] // Owner Bot
 global.police = ['13049948857'] // Police Bot
 global.mods = ['13049948857']  // Want some help?
 global.prems = ['13049948857'] // Premium user has unlimited limit
