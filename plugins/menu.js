@@ -1,3 +1,22 @@
+Skip to content
+MendingSalto
+/
+Dev-3S-Md
+Public
+forked from MendingTuru/Dev-3S-Md
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Dev-3S-Md/plugins/menu.js
+@MendingTuru
+MendingTuru Update menu.js
+ 1 contributor
+493 lines (486 sloc)  28.5 KB
 let levelling = require('../lib/levelling')
 let { MessageType } = require('@adiwajshing/baileys')
 let fs = require('fs')
@@ -6,14 +25,14 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌────►〔 *3S-BOT* 〕
-├ Hallo👋 %name!
+┌────►〔 *K•K•R-BOT* 〕
+├ Hallo Tod Ngentod %name!
 ├ Kamu Adalah Role %role
 ├ Kamu adalah %rank
 ├ Tersisa *%limit Limit*
 ├ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 ├%totalexp XP in Total
-├✮ Owner: https://wa.me/6287740530274
+├✮ Owner: https://wa.me/+13049948857
 └────►
 %readmore`.trimStart(),
   header: '┏━━━•❅•°•❈ %category 』',
@@ -204,151 +223,151 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.sendMessage(m.chat, {
            title: `Hallo ${name} ${'@'+m.sender.split`@`[0]}`.trim(),
            text: `\nKamu Adalah ${rank}\nTersisa *${limit}* Limit\nLevel *${level}*`, 
-           footer: "© 𝐗𝐢𝐚𝐨𝐁𝐎𝐓",
+           footer: "® K•K•R✓𝐁𝐎𝐓",
            buttonText: "Klik Disini",
            "sections": [
             {
               "rows": [
                 {
                   "title": `Menu Utama`,
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? all"
                 },
                  {
                   "title": "Rpg",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? rpg"
                 },
                 {
                   "title": "Daftar",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? daftar"
                 },
                 {
                   "title": "Rules",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? rules"
                 },
                  {
                   "title": "Request Fitur",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? request"
                 },
                 {
                   "title": "Main",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? main"
                 },
                   {
                   "title": "Game",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? game"
                 }, {
                   "title": "Exp & Limit",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? xp"
                 }, {
                   "title": "Sticker",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? sticker"
                 }, 
                 {
                   "title": "Donasi",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? donasi"
                 },
                 {
                   "title": "Kerang Ajaib",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? kerang"
                 }, {
                   "title": "Quotes",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? admin"
                 }, {
                   "title": "Grup",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? group"
                 },
                 {
                   "title": "Premium",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? premium"
                 }, {
                   "title": "Internet",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? internet"
                 },
                 {
                   "title": "Anonymous Chat",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                  "rowId": ".? anonymous"
                 },
                 {
                   "title": "Nulis & Logo",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? tools"
                 }, {
                   "title": "Fun",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? fun"
                 }, 
                 {
                   "title": "Asupan",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? asupan"
                 },
                 {
                   "title": "Database",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? database"
                 },
                 {
                   "title": "Al-Qur'an",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? quran"
                 },
                 
                 {
                   "title": "Jadi Bot",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? jadibot"
                 },
                    {
                   "title": "Owner",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? owner"
                 },
                 {
                   "title": "Host",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? host"
                 },
                 {
                   "title": "Advanced",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? advanced"
                 },
                 {
                   "title": "Info",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? info"
                 },
                 {
                   "title": "Exp",
-                  "description": "© ᵈʳᴋᴏᴋᴏ ᴘᴀ፝֟፝֟ɴɢᴇʀᴀɴ×፝֟͜×",
+                  "description": "® ᵈʳGibran Alexander✓×፝֟͜×",
                   "rowId": ".? exp"
                 },
               ]
@@ -366,7 +385,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     // gunakan ini jika kamu menggunakan whatsapp bisnis
     //   throw `
-    // ┌〔 DAFTAR MENU 〕
+    // ┌〔 PILIH AJA NGNTOD 〕
     // ├ ${_p + command} all
     // ├ ${_p + command} game
     // ├ ${_p + command} xp
@@ -491,3 +510,18 @@ function ucapan() {
   }
   return res
 }
+Footer
+® 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Dev-3S-Md/menu.js at main · MendingSalto/Dev-3S-Md
